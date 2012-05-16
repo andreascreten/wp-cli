@@ -21,7 +21,7 @@ sudo pear install andreascreten.github.com/wp-cli/wpcli
 **Via GIT:**
 
 ```sh
-git clone --recurse-submodules git://github.com/andreascreten/wp-cli.git ~/git/wp-cli
+git clone --recursive git://github.com/andreascreten/wp-cli.git ~/git/wp-cli
 cd ~/git/wp-cli
 sudo utils/build-dev
 ```
