@@ -93,10 +93,20 @@ class DBCommand extends WP_CLI_Command {
 	public static function help() {
 		WP_CLI::line( <<<EOB
 wp db cli               Open a SQL command-line interface using the WordPress credentials.
+
 wp db connect           Print a string for connecting to the database.
+
 wp db export            Export the WordPress database using mysqldump.
+                          Options:
+                            --file=<filename.sql>  The exported file name.  Defaults to ./<databasename>.sql
+
 wp db import            Import a database exported via mysqldump.
+                          Options:
+                            --file=<filename.sql>  The file to import.  Defaults to ./<databasename>.sql
+                              
 wp db query             Execute a query against the WordPress database.
+                          Usage:
+                            wp db query "SELECT COUNT(*) FROM wp_posts"
 EOB
 	);
 	}
